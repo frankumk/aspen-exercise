@@ -1,4 +1,5 @@
 const Deck = require('./deck.js')
+const axios = require('axios')
 
 class Game {
   constructor(){
@@ -87,13 +88,15 @@ class Game {
 
     async checkGameState(){
       if(this.p1CardCount() <= 0){
+          await axios.put('http://localhost:3080/api/record', {id: 2})
           console.log("player Two wins game")
           this.winner = 2
           this.gameState = "player two wins game"
       }else if(this.p2CardCount() <= 0){
+        await axios.put('http://localhost:3080/api/record', {id: 1})
         console.log("player One wins game")
         this.winner = 1
-          this.gameState = "player one wins game"
+        this.gameState = "player one wins game"
       }else{
         console.log("game play keeps going")
         return

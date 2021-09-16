@@ -19,7 +19,7 @@ router.put('/', async( req,res,next) =>{
         id: req.body.id
       }
     })
-    player.wins = player.wins++
+    player.wins = player.wins+1
     await player.save()
     res.status(201).send(await Player.findAll())
   }catch(ex){

@@ -11,16 +11,27 @@ router.get('/', async (req,res,next) => {
     const game = new Game()
     await game.deal()
     let results = []
+    let count = 0
     while(game.gameState === "playing"){
-      results = results.concat(game.playHand())
+      count = count+1
+      console.log(`round`,count)
+      if(count === 20000){
+        results = {
+          results: "players called it after 20k hands"
+        }
+        return
+      }
+      results = results.concat(await game.playHand())
       await game.checkGameState()
     }
     // if(game.winner == 2){
-    //   const shit = (await axios.put('https://localhost:3080/api/record/', {id: 2})).data
-    //   console.log(shit)
+    //   console.log('CHEESY')
+    // //   const shit = (await axios.put('https://localhost:3080/api/record/', {id: 2})).data
+    // //   console.log(shit)
     // }else{
-    //   const fuck = (await axios.put('https://localhost:3080/api/record/', {id: 1})).data
-    //   console.log(fuck)
+    //   console.log('CHEESY2def')
+    // //   const fuck = (await axios.put('https://localhost:3080/api/record/', {id: 1})).data
+    // //   console.log(fuck)
     // }
     res.send(results)
   }catch(ex){
