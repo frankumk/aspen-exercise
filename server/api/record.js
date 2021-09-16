@@ -23,6 +23,6 @@ router.put('/', async( req,res,next) =>{
     await player.save()
     res.status(201).send(await Player.findAll())
   }catch(ex){
-
+    next(ex)
   }
 })
