@@ -1,6 +1,11 @@
-import Game from "./game.js"
+import Game from "./gameUtil/game.js"
 
 const game = new Game()
-console.log(Game)
-game.startGame()
+game.deal()
 game.playHand()
+game.playHand()
+
+// while(game.gameState === "playing"){
+//   game.playHand()
+//   game.checkGameState()
+// }

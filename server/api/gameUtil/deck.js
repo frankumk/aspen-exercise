@@ -3,11 +3,12 @@ const values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
 const rank = [14,2,3,4,5,6,7,8,9,10,11,12,13]
 
 
-export default class Deck {
+class Deck {
   constructor(cards=buildDeck()){
     this.cards = cards
   }
 
+  //fisher-yates
   shuffle() {
     for(let i = this.cards.length - 1; i > 0; i--){
       let index = Math.floor(Math.random() * (i+1))
@@ -33,3 +34,5 @@ const buildDeck = () => {
     })
   })
 }
+
+module.exports = Deck

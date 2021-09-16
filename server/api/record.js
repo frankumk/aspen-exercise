@@ -12,11 +12,11 @@ router.get('/', async( req, res, next ) => {
 })
 
 //increases wins when game is won
-router.put('/:id', async( req,res,next) =>{
+router.put('/', async( req,res,next) =>{
   try{
     const player = await Player.findOne({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     })
     player.wins = player.wins++

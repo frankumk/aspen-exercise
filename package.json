@@ -4,7 +4,9 @@
   "description": "",
   "main": "deck.js",
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "dependencies": {
     "axios": "^0.21.4",
     "express": "^4.17.1",
+    "path": "^0.12.7",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5"
   }

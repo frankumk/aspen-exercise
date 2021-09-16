@@ -14,11 +14,10 @@ createdb war
 npm run start
 ```
 
-
-### Run your unit tests
-```
-npm run test:unit
-```
+###WIN RECORD: '/api/record'
+###GAME PLAY: '/api/game'
 
 ### Thanks for the opportunity to apply! I look forward to hearing from you.
- - Improvements: break up play methods, less this, less ifs
+ - Improvements: break up play methods, less this, less ifs, more methods, less repeat code
+ - Add code to handle tiebreaker when player has <2 cards
+ - TESTS!UI!
