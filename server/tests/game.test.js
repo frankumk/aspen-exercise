@@ -3,7 +3,7 @@ const app = require('../app.js')
 
 describe(
   'should return game play', () => {
-    test('should return objects representing each round of play', async() => {
+    test('should return objects representing each round of play not greater than 5k rounds', async() => {
       const test = await request(app).get('/api/game')
       expect(test.statusCode).toEqual(200)
       expect(test.body.length)<5001

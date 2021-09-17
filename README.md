@@ -21,7 +21,7 @@ npm run start
 
 ### Thanks for the opportunity to apply! I look forward to hearing from you.
  - Improvements:
-      - Figure out the 5k round tie......feature! No one wants to play war for that long.
+      - Figure out the 5k round tie..  .feature! No one wants to play war for that long.
       - break up play into different methods
       - less this, less ifs, more maps, more methods
       - less repeat code
