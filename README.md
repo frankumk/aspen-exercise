@@ -5,7 +5,7 @@
 npm install
 ```
 
-##Database: install PostgreSQL
+## Database: install PostgreSQL
 ```
 psql
 createdb war
@@ -16,8 +16,8 @@ createdb war
 npm run start
 ```
 
-###WIN RECORD: '/api/record'
-###GAME PLAY: '/api/game'
+### WIN RECORD: '/api/record'
+### GAME PLAY: '/api/game'
 
 ### Stop Server and Run Basic Tests (same db)
 ```
