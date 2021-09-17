@@ -5,7 +5,7 @@ module.exports = router
 //displays each players lifetime wins
 router.get('/', async( req, res, next ) => {
   try{
-    res.send(await Player.findAll())
+    res.json(await Player.findAll())
   }catch(ex){
     next(ex)
   }
@@ -21,7 +21,7 @@ router.put('/', async( req,res,next) =>{
     })
     player.wins = player.wins+1
     await player.save()
-    res.status(201).send(await Player.findAll())
+    res.json(await Player.findAll())
   }catch(ex){
     next(ex)
   }

@@ -1,6 +1,5 @@
 const db = require('./db')
 const Player = require('./player')
-const Round = require('./round')
 
 
 const syncAndSeed = async()=>{
@@ -17,5 +16,4 @@ module.exports = {
   syncAndSeed,
   db,
   Player,
-  Round
 }

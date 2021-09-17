@@ -10,12 +10,20 @@ class Deck {
 
   //fisher-yates
   shuffle() {
-    for(let i = this.cards.length - 1; i > 0; i--){
-      let index = Math.floor(Math.random() * (i+1))
-      let temp = this.cards[index]
-      this.cards[index] = this.cards[i]
-      this.cards[i] = temp
+    var m = this.cards.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = this.cards[m];
+      this.cards[m] = this.cards[i];
+      this.cards[i] = t;
     }
+
   }
 }
 
