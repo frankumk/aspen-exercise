@@ -44,7 +44,7 @@ class Game {
       playerOneCardCount: this.p1CardCount(),
       playerTwoCardCount: this.p2CardCount(),
     }
-    console.log(result)
+    //console.log(result)
     this.roundWinner = ''
     return result
   }
